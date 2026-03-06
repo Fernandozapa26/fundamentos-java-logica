@@ -1,51 +1,60 @@
 package main.java.com.example;
 
+import java.util.ArrayList;
+
 public class TiposDeDatosPrimitivos {
 
-    public void demostrarEnteros() {
-        byte b = 100;
-        short s = 1000;
-        int i = 100000;
-        long l = 10000000000L;
+    static  void demostrarEnteros(){
+        //Ejemplos de rangos
 
-        System.out.println(b);
-        System.out.println(s);
-        System.out.println(i);
-        System.out.println(l);
+        //------------Ejemplos de byte ------------------
+        byte edad = 25;   //Rango 8 bits  -128 a 127
+        byte temperatura = -10;
+
+        //------------Ejemplos de short------------------
+        short avances = 15000;   //16 bits -32,768 a 32,767
+
+        short total = 20000;
+
+        //---------------Ejemplos de int-------------------
+        int bolsas = 500000;    //32 bits -2,147,483,648 a 2,147,483,647
+        int zapato ;
+
+        //--------------------Ejemplos de long--------------
+        long DistanciaMunicipal = 9223372036854775807L;
+        long poblacionMundial = 8000000000L; //64 bits -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807
+
     }
+    static void demostrarFlotantes(){
 
-    public void demostrarFlotantes() {
-        float f = 1.0332f;
-        double d = 1.0452345634;
+        double porcentaje = 8.12542445; // ejemplo de double (mayor precisión)
+        float comision = 4.254f; // ejemplo de float (menor precisión)
 
-        System.out.println(f);
-        System.out.println(d);
+        System.out.println("Double: " + porcentaje);
+        System.out.println("Float: " + comision);
     }
+    //--------------------ejemplos de char--------------------
+    static void demostrarCaracteres() {
 
-    public void demostrarCaracteres() {
-        char c = 'A';
-        System.out.println(c);
+        char letra = 'A';
+        char numero = '5';
+        char simbolo = '@';
+
+        System.out.println("Letra: " + letra);
+        System.out.println("Número: " + numero);
+        System.out.println("Símbolo: " + simbolo);
     }
-
-    public void demostrarBooleanos() {
-        boolean b1 = true;
-        boolean b2 = false;
-
-        System.out.println(b1);
-        System.out.println(b2);
+    //--------------------ejemplos booleanos--------------------
+    static void demostrarBooleanos(){
+        boolean mayor = false;
+        boolean enCasa = true;
+        System.out.println("boolean: " + mayor + ".");
     }
+    //-----ejemplos de valores por defectos -----------
+    //se instancia un array list (clase propia de java)
+    public static void demostrarValoresPorDefecto() {
+        ArrayList<String> nombres = new ArrayList<>();
+        System.out.println(nombres);
 
-    public void demostrarValoresPorDefecto() {
-        // Las variables locales deben inicializarse antes de usarse
-        // Los atributos de clase sí tienen valores por defecto
-    }
-
-    public static void main(String[] args) {
-        TiposDeDatosPrimitivos t = new TiposDeDatosPrimitivos();
-
-        t.demostrarEnteros();
-        t.demostrarFlotantes();
-        t.demostrarCaracteres();
-        t.demostrarBooleanos();
     }
 }
